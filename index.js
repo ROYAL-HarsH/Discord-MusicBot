@@ -7,7 +7,7 @@ client.commands = new Collection();//Making client.commands as a Discord.js Coll
 client.queue = new Map()
 
 client.config = {
-  prefix: process.env.PREFIX
+  prefix: ?
 }
 
 //Loading Events
