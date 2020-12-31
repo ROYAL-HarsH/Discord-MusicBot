@@ -10,6 +10,13 @@ client.config = {
   prefix: process.env.PREFIX
 }
 
+/**
+ * Client Events
+ */
+client.on("ready", () => {
+  console.log(`${client.user.username} ready!`);
+  client.user.setActivity(`?help`, { type: "LISTENING" });
+
 //Loading Events
 fs.readdir(__dirname + "/events/", (err, files) => {
   if (err) return console.error(err);
@@ -34,4 +41,4 @@ fs.readdir("./commands/", (err, files) => {
 });
 
 //Logging in to discord
-client.login(process.env.TOKEN)
+client.login(process.env.token)
